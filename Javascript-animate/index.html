@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+ <meta name="http-equiv=X-UA-Compatible" content="ie-edge">
+ <title>Javascript element.animate</title>
+ <style>
+   body{
+     display:flex;
+     height: 100vh;
+     align-items: center;
+     justify-content: center;
+   }
+   .container{
+     width: 600px;
+     border: 1px solid red;
+   }
+   .pelota{
+     width: 100px;
+     height: 100px;
+     background: red;
+     border-radius: 50%
+   }
+ </style>
+ </head>
+ <body>
+  <div class="container">
+    <div class="pelota" id="pelota">
+
+    </div>
+  </div>
+  <script>
+    const $pelota = document.getElementById('pelota');
+    // element.animate(keyframes = [] , option = {})
+    $pelota.animate([
+      {
+        // from
+        transform: 'translateX(0)'
+      },
+      {
+        // to
+        transform: 'translateX(500px)'
+      }
+    ],{
+      duration: 1000 ,
+      delay:1000,
+      direction: 'normal',
+      easing:'linear',
+      iterations: Infinity ,
+      fill:'forwards',
+      iterationStart: .5 , // =50% de la animacion
+      // endDelay: 5000,
+  })
+  </script>
+ </body>
+ </html>
