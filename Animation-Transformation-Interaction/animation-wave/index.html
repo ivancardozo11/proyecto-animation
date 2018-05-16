@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   <meta name="http-equiv=X-UA-Compatible" content="ie-edge">
+ <title>Waves</title>
+ <style>
+ body{
+   margin: 0;
+ }
+ .circulo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(0,0,0, .5);
+  position: absolute;
+  animation: 5s wave infinite alternate;
+ }
+ .container{
+    position: absolute;
+ }
+ @keyframes wave {
+   0%{
+     transform: translateX(0px)  translateY(0px);
+   }
+   100%{
+     transform: translateX(200px)  translateY(100px);;
+   }
+ }
+ .circulo.b{
+      animation-delay:1s;
+ }
+ .circulo.c{
+      animation-delay:2s;
+ }
+ </style>
+ </head>
+ <body>
+   <div class="container">
+     <div class="circulo a"></div>
+     <div class="circulo b"></div>
+     <div class="circulo c"></div>
+   </div>
+ </body>
+ </html>
